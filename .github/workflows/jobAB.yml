@@ -1,0 +1,11 @@
+name: jobAB
+
+on: [push]
+
+jobs:
+  jobA:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cmdline01
+        run: echo This is from cmdline01.
+        
