@@ -8,4 +8,8 @@ jobs:
     steps:
       - name: cmdline01
         run: echo This is from cmdline01.
-        
+  jobB:
+    runs-on: centos-latest
+    steps:
+      - name: cmdline02
+        run: echo This is from cmdline02.
