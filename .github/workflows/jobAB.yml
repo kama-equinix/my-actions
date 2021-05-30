@@ -10,6 +10,7 @@ jobs:
         run: echo This is from cmdline01.
   jobB:
     runs-on: macos-latest
+    needs: [jobA]
     steps:
       - name: cmdline02
         run: echo This is from cmdline02.
