@@ -25,8 +25,21 @@ jobs:
       with:
         collection: echo.json
         reporters: cli,junit
+    - name: Copy-result-to-reports-dir
+      run: cp -r newman/ reports
     - name: Step-after-newman
-      run: ls -la
+      run: ls -la *
+      
+    - run: npm ci                   # install packages
+    - run: npm test                 # run tests (configured to use jest-junit reporter)
+
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: success() || failure()    # run this step even if previous step failed
+      with:
+        name: JEST Tests            # Name of the check run which will be created
+        path: reports/jest-*.xml    # Path to test results
+        reporter: jest-junit        # Format of test results
     - name: Upload-artifacts
       uses: actions/upload-artifact@v1.0.0
       with:
