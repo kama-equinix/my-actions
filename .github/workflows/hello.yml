@@ -20,3 +20,12 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    - name: Newman Action
+      # You may pin to the exact commit or the version.
+      # uses: matt-ball/newman-action@0659e9b8d056c0d03d94e1dbfce380512088b566
+      uses: matt-ball/newman-action@v0.2.4
+      with:
+        # Collection to use
+        collection: abc.json
+
+    
