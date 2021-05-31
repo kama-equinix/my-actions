@@ -23,7 +23,7 @@ jobs:
     - name: Newman Action
       uses: matt-ball/newman-action@v0.2.4
       with:
-        collection: echo-test.json
+        collection: echo.json
     - name: Step-after-newman
       run: ls -la
 
