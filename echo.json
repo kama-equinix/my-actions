@@ -13,13 +13,7 @@
 					"script": {
 						"exec": [
 							"console.log('init');",
-							"pm.environment.set(\"loop\", 1);",
-							"",
-							"if (pm.response.to.have.status(200)) {",
-							"    console.log('Status code is correct.');",
-							"} else {",
-							"    console.log('Status code is wrong!');",
-							"}"
+							"pm.environment.set(\"loop\", 1);"
 						],
 						"type": "text/javascript"
 					}
