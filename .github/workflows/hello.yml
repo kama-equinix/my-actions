@@ -24,7 +24,7 @@ jobs:
       uses: anthonyvscode/newman-action@v1
       with:
         collection: echo.json
-        reporters: cli,htmlextra
+        reporters: cli,junit
     - name: Step-after-newman
       run: ls -la
     - name: Upload-artifacts
