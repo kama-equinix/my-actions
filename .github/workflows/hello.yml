@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: list files before checkout
-      run: ls -la *
+      run: ls -la
     - name: checkout
       uses: actions/checkout@v1
     - name: list files after checkout
