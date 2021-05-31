@@ -8,7 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Step-before-checkout
+      run: ls -la
+    - name: Step-checkout
+      uses: actions/checkout@v1
+    - name: Step-after-checkout
+      run: ls -la
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
