@@ -24,6 +24,7 @@ jobs:
       uses: matt-ball/newman-action@v0.2.4
       with:
         collection: echo.json
+        reporters: cli,htmlextra
     - name: Step-after-newman
       run: ls -la
 
